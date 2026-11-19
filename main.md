@@ -6,7 +6,7 @@
 
 - **AI Agent Development:** LLM tool calling, workflow automation, LLM-based information extraction, browser automation, prompt engineering, resume matching
 - **Tech Stack:** Python, SQL (MySQL, Oracle PL/SQL, SQL Server), PySpark, Power BI
-- **Certificates:** China Futures, Securities & Funds Practitioner Licenses ; Associate Member of HKSI Passed Paper1,7-12 exempted) of HKSI; CPA Australia (Associate Member); GARP FRM Part I (Passed); Hong Kong TTPS Visa
+- **Credentials:** China Futures, Securities & Funds Practitioner Licenses; HKSI Associate Member (Paper 1 passed; Papers 7–12 exempted); CPA Australia Associate Member; GARP FRM Part I passed; Hong Kong TTPS Visa
 - **Soft Skills:** Curiosity, Learning from others, Working Under Pressure, Growth Mindset
 
 ## Experience
@@ -31,15 +31,8 @@
 
 **Zhongtai Securities** · Shenzhen, Guangdong, China · Dec. 2023 – Mar. 2024
 - **Optimized Data ETL & Sync Tasks**: Streamlining data integration across multiple platforms, including Oracle SQL and MySQL. Ensured strict separation of production and development environments.
-- **Optimized Strategy Models & Risk Assessment**: Organized & optimized strategies, gained understanding to improved strategy exec speed & efficiency using C++ & pybind11. Conducted portfolio risk quantification with statistical methods e.g. Monte Carlo, estimated VaR & stress tests, used GARCH models for volatility analysis.
-- **Automated Tools Development**: Developed trade message parsing & automated biding tools, automated multi-strategy execution, significantly enhanced trading efficiency, received unanimous team approval.
-- **Developed Data Retrieval & Parsing Scripts**: Developed Python scripts for automated retrieval and parsing of trade receipts into databases. Created PDF parsing tools to extract key information from transaction documents, cutting manual data entry and improving processing speed.
-
-### Forex Research Intern
-
-**CMC Markets** · Sydney, NSW, Australia · May 2023 – Aug 2023
-- **Conducted Market Research and Risk Assessment**: Analyzed global currency markets, macroeconomic indicators, and central bank policies to identify trading opportunities. Assessed portfolio risk exposure, developed stop-loss/gain checkpoints, optimizing risk-reward ratios.
-- **Developed Multi-Factor Time-Series Model**: Created a robust model based on academic insights to predict gold price movements, generating profits in simulation trading.
+- **Strategy Optimization & Quantitative Risk Research**: Optimized strategies using C++ and pybind11; analyzed FX markets, macroeconomic indicators, and central bank policies; developed a multi-factor gold price model that generated profits in simulated trading; and assessed portfolio risk using Monte Carlo VaR, stress tests, GARCH, and stop-loss thresholds.
+- **Automated Trading & Data Tools**: Built trade-message parsers, multi-strategy execution tools, and Python/PDF parsers to automate receipt processing and reduce manual data entry.
 
 ## Education
 
