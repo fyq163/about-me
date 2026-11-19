@@ -12,20 +12,20 @@ jobs:
     steps:
       - name: Check out the selected revision
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
-      - name: Install LaTeX and PDF tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends \
-            latexmk texlive-latex-extra texlive-fonts-recommended poppler-utils
+      - name: Build the resume
+        uses: xu-cheng/latex-action@v4
+        timeout-minutes: 15
+        with:
+          root_file: main.tex
+          args: -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build
 
-      - name: Build and check the resume
+      - name: Check that the resume has one page
         run: |
-          latexmk -pdf -interaction=nonstopmode -halt-on-error \
-            -file-line-error -outdir=build main.tex
-          pages=$(pdfinfo build/main.pdf | awk '/^Pages:/ {print $2}')
-          if [ "$pages" != "1" ]; then
-            echo "Expected a one-page resume, got ${pages:-an unknown number of} pages." >&2
+          if ! grep -Eq 'Output written on .*\(1 page,' build/main.log; then
+            echo "The resume must be exactly one page. Check build/main.log for the page count." >&2
             exit 1
           fi
           cp build/main.pdf build/Resume.pdf
