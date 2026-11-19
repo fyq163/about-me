@@ -1,2 +1,17 @@
-# about-me
-Resume and personal site about me
+# About Me
+
+My resume source and generated Markdown version.
+
+## Convert the resume to Markdown
+
+The converter reads the structured LaTeX resume and keeps its section, position, and bullet hierarchy.
+
+```bash
+python3 latex_to_markdown.py
+```
+
+By default, it reads `main.tex` beside the script and writes `main.md` in the same directory. Input and output paths can also be supplied:
+
+```bash
+python3 latex_to_markdown.py input.tex output.md
+```
