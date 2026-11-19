@@ -14,6 +14,7 @@
 
 **The University of Hong Kong** · Hong Kong · Aug. 2025 – Present
 - **AI Agent Development**: Independently designed, developed, and implemented AI agents and automated workflows, integrating large language models (LLMs), tool calling, and workflow automation to improve operational efficiency.
+- **Job Hunting AI (Personal, Jan–Feb 2025)**: Built an LLM agent to match resumes and automate applications.
 - **Expense Reimbursement Automation**: Developed an AI-powered reimbursement system that streamlined administrative workflows and **reduced the overall reimbursement cycle by 50%**.
 - **Admissions Process Automation**: Built and integrated AI agents into student admissions workflows, **increasing the number of applications processed per staff member by 50%**.
 - **Empirical Asset Pricing Research**: Assisted professors with academic research in empirical asset pricing, including financial data collection, cleaning, processing, econometric analysis, and regression-based empirical testing.
