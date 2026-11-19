@@ -28,7 +28,7 @@ jobs:
             echo "The resume must be exactly one page. Check build/main.log for the page count." >&2
             exit 1
           fi
-          cp build/main.pdf build/Resume.pdf
+          cp build/main.pdf Resume.pdf
 
       - name: Publish the PDF to a release
         env:
@@ -36,7 +36,7 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: |
           tag="resume-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          gh release create "$tag" build/Resume.pdf \
+          gh release create "$tag" Resume.pdf \
             --target "$GITHUB_SHA" \
             --title "Resume (run ${GITHUB_RUN_NUMBER})" \
             --notes "Built from commit ${GITHUB_SHA}." \
