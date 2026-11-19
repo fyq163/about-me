@@ -7,7 +7,6 @@
 - **AI Agent Development:** LLM tool calling, workflow automation, LLM-based information extraction, browser automation, prompt engineering, resume matching
 - **Tech Stack:** Python, SQL (MySQL, Oracle PL/SQL, SQL Server), PySpark, Power BI
 - **Credentials:** China Futures, Securities & Funds Practitioner Licenses; HKSI Associate Member (Paper 1 passed; Papers 7–12 exempted); CPA Australia Associate Member; GARP FRM Part I passed; Hong Kong TTPS Visa
-- **Soft Skills:** Curiosity, Learning from others, Working Under Pressure, Growth Mindset
 
 ## Experience
 
