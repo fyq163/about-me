@@ -1,0 +1,43 @@
+name: Build resume PDF
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the selected revision
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX and PDF tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            latexmk texlive-latex-extra texlive-fonts-recommended poppler-utils
+
+      - name: Build and check the resume
+        run: |
+          latexmk -pdf -interaction=nonstopmode -halt-on-error \
+            -file-line-error -outdir=build main.tex
+          pages=$(pdfinfo build/main.pdf | awk '/^Pages:/ {print $2}')
+          if [ "$pages" != "1" ]; then
+            echo "Expected a one-page resume, got ${pages:-an unknown number of} pages." >&2
+            exit 1
+          fi
+          cp build/main.pdf build/Resume.pdf
+
+      - name: Publish the PDF to a release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          tag="resume-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          gh release create "$tag" build/Resume.pdf \
+            --target "$GITHUB_SHA" \
+            --title "Resume (run ${GITHUB_RUN_NUMBER})" \
+            --notes "Built from commit ${GITHUB_SHA}." \
+            --latest
